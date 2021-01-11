@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".RegisterActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editRegisztracioUserName"
+        android:hint="Felhasználó név"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editRegisztracioPassword"
+        android:hint="Jelszó"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:inputType="textPassword"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editRegisztracioEmail"
+        android:hint="Email cim"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:inputType="textEmailAddress"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonAdatbevitel"
+        android:text="Küldés"
+        android:textSize="25sp"/>
+
+</LinearLayout>
