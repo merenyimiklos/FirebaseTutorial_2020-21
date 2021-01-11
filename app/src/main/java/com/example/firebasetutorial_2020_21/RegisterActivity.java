@@ -38,20 +38,26 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String userName = editTextUserName.getText().toString();
-                String password = editTextPassword.getText().toString();
-                String email = editTextEmail.getText().toString();
+                if (editTextEmail.getText().toString().isEmpty() || editTextPassword.getText().toString().isEmpty() ||
+                        editTextUserName.getText().toString().isEmpty()) {
+                    Toast.makeText(RegisterActivity.this, "Minden mezőt ki kell tölteni!", Toast.LENGTH_SHORT).show();
+                } else {
 
-                users = new Users(userName, password, email);
+                    String userName = editTextUserName.getText().toString();
+                    String password = editTextPassword.getText().toString();
+                    String email = editTextEmail.getText().toString();
 
-                databaseReference.child(String.valueOf(maxid+1)).setValue(users);
+                    users = new Users(userName, password, email);
+
+                    databaseReference.child(String.valueOf(maxid + 1)).setValue(users);
 
 
-                Toast.makeText(RegisterActivity.this, "Sikeres adat felvétel", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Sikeres adat felvétel", Toast.LENGTH_SHORT).show();
 
-                Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
-                startActivity(intent);
-                finish();
+                    Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         });
     }
